@@ -48,7 +48,6 @@ JOB_TEMPLATE = {
                 'name': 'Notebook Validation Tests',
                 },
             },
-        },
     ]
 }
 PULL_REQUEST_TEMPLATE = {
