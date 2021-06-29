@@ -50,6 +50,16 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
                 'python -m pytest --nbval ',
                 f'{build_job.collection.name}/{build_job.category.name}',
             ])
+        if os.path.isfile(f'{build_job.collection.name}/{build_job.category.name}/pre-install.sh'):
+            job['steps'][4]['run']['command'] = ' '.join([
+                f'./{build_job.collection.name}/{build_job.category.name}/pre-install.sh',
+                ';',
+                'pip install -r',
+                f'{build_job.collection.name}/{build_job.category.name}/requirements.txt',
+                ';',
+                'python -m pytest --nbval ',
+                f'{build_job.collection.name}/{build_job.category.name}',
+            ])
         else:
             job['steps'][4]['run']['command'] = ' '.join([
                 'pip install -r',
