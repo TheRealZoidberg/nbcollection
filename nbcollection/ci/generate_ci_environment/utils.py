@@ -41,6 +41,8 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
         job['steps'][3]['store_artifacts']['path'] = SCANNER_ARTIFACT_DEST_DIR
         if os.path.isfile(f'{build_job.collection.name}/{build_job.category.name}/pre-requirements.txt'):
             job['steps'][4]['run']['command'] = ' '.join([
+                'pip install pytest',
+                'pip install nbval',
                 'pip install -r',
                 f'{build_job.collection.name}/{build_job.category.name}/pre-requirements.txt',
                 ';',
@@ -52,7 +54,9 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
             ])
         if os.path.isfile(f'{build_job.collection.name}/{build_job.category.name}/pre-install.sh'):
             job['steps'][4]['run']['command'] = ' '.join([
-                f'./{build_job.collection.name}/{build_job.category.name}/pre-install.sh',
+                'pip install pytest',
+                'pip install nbval',
+                f'{build_job.collection.name}/{build_job.category.name}/pre-install.sh',
                 ';',
                 'pip install -r',
                 f'{build_job.collection.name}/{build_job.category.name}/requirements.txt',
@@ -62,6 +66,8 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
             ])
         else:
             job['steps'][4]['run']['command'] = ' '.join([
+                'pip install pytest',
+                'pip install nbval',
                 'pip install -r',
                 f'{build_job.collection.name}/{build_job.category.name}/requirements.txt',
                 ';',
