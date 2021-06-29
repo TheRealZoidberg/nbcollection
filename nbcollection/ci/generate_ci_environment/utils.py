@@ -40,10 +40,8 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
         job['steps'][2]['run']['name'] = f'Build {job_name} notebooks'
         job['steps'][3]['store_artifacts']['path'] = SCANNER_ARTIFACT_DEST_DIR
         job['steps'][4]['run']['command'] = ' '.join([
-            'python -m pytest --nbval /tmp/'
-            f'{build_job.collection.name}',
-            '/',
-            f'{build_job.category.name}',
+            'python -m pytest --nbval '
+            f'{build_job.collection.name}/{build_job.category.name}',
             ])
         config['jobs'][job_name] = job
         config['workflows'][NBCOLLECTION_WORKFLOW_NAME]['jobs'].append(job_name)
