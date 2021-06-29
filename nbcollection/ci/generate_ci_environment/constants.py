@@ -45,7 +45,7 @@ JOB_TEMPLATE = {
         'validation',
         {
             'run': {
-                'command': 'python -m pytest --nbval'
+                'command': 'python -m pytest --nbval',
                 'name': 'Notebook Validation Tests',
                 },
             },
