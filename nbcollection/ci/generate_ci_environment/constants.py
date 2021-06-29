@@ -42,13 +42,13 @@ JOB_TEMPLATE = {
                 'path': SCANNER_ARTIFACT_DEST_DIR,
             },
         },
-        'validation',
         {
             'run': {
                 'command': 'python -m pytest --nbval',
                 'name': 'Notebook Validation Tests',
                 },
             },
+        },
     ]
 }
 PULL_REQUEST_TEMPLATE = {
