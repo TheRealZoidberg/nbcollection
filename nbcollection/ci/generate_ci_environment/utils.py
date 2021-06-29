@@ -43,9 +43,8 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
             'pip install -r',
             f'{build_job.collection.name}/{build_job.category.name}',
             'requirements.txt',
-        ])
-        job['steps'][5]['run']['command'] = ' '.join([
-            'python -m pytest --nbval '
+            ';',
+            'python -m pytest --nbval ',
             f'{build_job.collection.name}/{build_job.category.name}',
         ])
         config['jobs'][job_name] = job
