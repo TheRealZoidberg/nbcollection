@@ -41,6 +41,9 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
         job['steps'][3]['store_artifacts']['path'] = SCANNER_ARTIFACT_DEST_DIR
         job['steps'][4]['run']['command'] = ' '.join([
             'pip install -r',
+            f'{build_job.collection.name}/{build_job.category.name}/pre-requirements.txt',
+            ';',
+            'pip install -r',
             f'{build_job.collection.name}/{build_job.category.name}/requirements.txt',
             ';',
             'python -m pytest --nbval ',
