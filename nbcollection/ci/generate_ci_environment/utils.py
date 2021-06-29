@@ -60,7 +60,7 @@ def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path:
                 ';',
                 'pip install nbval',
                 ';',
-                f'{build_job.collection.name}/{build_job.category.name}/pre-install.sh',
+                f'sh {build_job.collection.name}/{build_job.category.name}/pre-install.sh',
                 ';',
                 'pip install -r',
                 f'{build_job.collection.name}/{build_job.category.name}/requirements.txt',
