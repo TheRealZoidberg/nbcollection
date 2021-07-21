@@ -270,7 +270,7 @@ def run_artifact_merge(command_context: CICommandContext, merge_context: MergeCo
 
         artifact_collections.append(ArtifactCollection(coll_name, sorted(cats)))
 
-    # html_builder.render_index(merge_context, artifact_collections)
+     html_builder.render_index(merge_context, artifact_collections)
     html_builder.render_static_assets(merge_context.assets_dir, merge_context.site_dir)
 
     dest_filepaths = []
