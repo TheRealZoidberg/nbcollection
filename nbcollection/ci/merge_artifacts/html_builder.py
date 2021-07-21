@@ -96,7 +96,7 @@ def render_index(merge_context: MergeContext, artifact_collections: typing.List[
             'url': f'{environment["website_base_url"]}/index.html',
         },
         'static_url': 'static/',
-        #'collections': artifact_collections,
+        'collections': artifact_collections,
     }
     index_filepath = os.path.join(merge_context.site_dir, 'index.html')
     with open(index_filepath, 'wb') as stream:
