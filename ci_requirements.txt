@@ -87,7 +87,7 @@ nbval==0.9.6
 nest-asyncio==1.5.1
 networkx==2.6.2
 notebook==6.4.3
-numpy==1.21.2
+numpy>=1.21.2
 packaging==21.0
 pandas==1.1.5
 pandoc==1.1.0
@@ -131,7 +131,7 @@ requests==2.23.0
 requests-toolbelt==0.9.1
 requests-unixsocket==0.2.0
 rfc3986==1.5.0
-scikit-image==0.16.2
+scikit-image>=0.16.2
 scipy==1.7.1
 semantic-version==2.8.5
 Send2Trash==1.8.0
