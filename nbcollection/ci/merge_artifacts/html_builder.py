@@ -73,7 +73,6 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
             'repo_name': merge_context.repo_name,
             'collection': coll_name,
             'category': cat_name,
-            #'modified': environment['today'],
         },
         'static_url': 'static/',
         'notebook_content': notebook_content,
