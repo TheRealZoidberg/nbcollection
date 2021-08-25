@@ -1,6 +1,6 @@
 GitPython
 Jinja2
-jupyer-client==6.1.12
+jupyer-client>=6.1.12
 nbconvert
 requests
 toml
