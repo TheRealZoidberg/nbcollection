@@ -1,7 +1,7 @@
 GitPython==3.1.1
-jinja2==2.10.3
-jupyter-client>=7.0.1
-nbconvert==6.1.0
+jinja2
+jupyter-client
+nbconvert
 requests==2.23.0
 toml==0.10.1
 PyYAML==5.3.1
