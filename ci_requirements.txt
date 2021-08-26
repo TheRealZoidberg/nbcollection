@@ -1,9 +1,9 @@
-GitPython==3.1.1
+GitPython
 jinja2
 jupyter-client
 nbconvert
-requests==2.23.0
-toml==0.10.1
-PyYAML==5.3.1
-lxml==4.6.2
-beautifulsoup4==4.9.3
+requests
+toml
+PyYAML
+lxml
+beautifulsoup4
