@@ -1,6 +1,6 @@
 from nbcollection.ci.constants import SCANNER_ARTIFACT_DEST_DIR
 
-NBCOLLECTION_BUILDER = 'continuumio/miniconda3:latest'
+NBCOLLECTION_BUILDER = 'continuumio/miniconda3:10.4.3'
 NBCOLLECTION_BUILDER_CIRCLE_CI_TIMEOUT = '120m'
 NBCOLLECTION_WORKFLOW_NAME = 'Build Notebooks'
 
