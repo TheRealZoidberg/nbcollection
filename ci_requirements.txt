@@ -1,8 +1,7 @@
 mistune>=0.8.1<2
 jinja2>=2.4
-pygments>=2.4.1
 jupyterlab_pygments
-jupyter_core
+jupyter_core>=4.6.0
 nbformat>=4.4
 entrypoints>=0.2.2
 pytest
