@@ -6,9 +6,6 @@ traitlets>=5.0
 jupyter_core
 nbformat>=4.4
 entrypoints>=0.2.2
-bleach
-testpath
-defusedxml
 pytest
 nbclient>=0.5.0<0.6.0
 nbconvert==5.6.1 
