@@ -2,3 +2,4 @@ gitpython
 toml
 PyYAML
 beautifulsoup4
+jupyter-client==6.1.12
