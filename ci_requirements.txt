@@ -1,6 +1,4 @@
-mistune==0.8.1<2
 jinja2==2.4
-jupyterlab_pygments
 jupyter_core==4.6.0
 nbformat==4.4
 entrypoints==0.2.2
