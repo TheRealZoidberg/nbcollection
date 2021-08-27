@@ -1,3 +1,4 @@
 gitpython
 toml
 PyYAML
+beautifulsoup4
