@@ -2,5 +2,5 @@ gitpython
 toml
 PyYAML
 beautifulsoup4
-jupyter-client==6.1.12
+jupyter-client==7.0.1
 nbconvert==6.1.0
