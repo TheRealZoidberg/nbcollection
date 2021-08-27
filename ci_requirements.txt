@@ -7,7 +7,6 @@ jupyter_core
 nbformat>=4.4
 entrypoints>=0.2.2
 bleach
-pandocfilters>=1.4.1
 testpath
 defusedxml
 pytest
