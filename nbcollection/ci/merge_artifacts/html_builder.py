@@ -85,19 +85,19 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
 def render_index(merge_context: MergeContext, artifact_collections: typing.List[ArtifactCollection]) -> None:
     index = load_template('index.html', merge_context)
     #environment = load_environment(merge_context)
-    #template_context = {
-    #    'page': {
-    #        'title': environment['index_title'],
-    #        'keywords': environment['keywords'],
-    #        'description': environment['description'],
-    #        'locale': environment['locale'],
-    #        'author': environment['author'],
-    #        'maintainer': environment['maintainer'],
-    #        'url': f'{environment["website_base_url"]}/index.html',
-    #    },
-    #    'static_url': 'static/',
-    #    'collections': artifact_collections,
-    #}
+    template_context = {
+        'page': {
+            'title': environment['index_title'],
+            'keywords': environment['keywords'],
+            'description': environment['description'],
+            'locale': environment['locale'],
+            'author': environment['author'],
+            'maintainer': environment['maintainer'],
+            'url': f'{environment["website_base_url"]}/index.html',
+        },
+        'static_url': 'static/',
+        'collections': artifact_collections,
+    }
     index_filepath = os.path.join(merge_context.site_dir, 'index.html')
     with open(index_filepath, 'wb') as stream:
         stream.write(index.render(**template_context).encode(ENCODING))
