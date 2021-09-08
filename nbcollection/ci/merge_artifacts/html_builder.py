@@ -84,7 +84,7 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
 
 def render_index(merge_context: MergeContext, artifact_collections: typing.List[ArtifactCollection]) -> None:
     index = load_template('index.html', merge_context)
-    #environment = load_environment(merge_context)
+    environment = load_environment(merge_context)
     template_context = {
         'page': {
             'title': environment['index_title'],
