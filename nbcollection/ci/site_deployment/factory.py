@@ -108,5 +108,5 @@ def run_site_deployment(options: argparse.Namespace) -> None:
     #                                  options.notebook_names,
     #                                  options.ci_mode)
 
-    # merge_context = generate_merge_context(options.project_path, options.org, options.repo_name)
-    # run_artifact_merge(command_context, merge_context)
+    merge_context = generate_merge_context(options.project_path, options.org, options.repo_name)
+    run_artifact_merge(command_context, merge_context)
