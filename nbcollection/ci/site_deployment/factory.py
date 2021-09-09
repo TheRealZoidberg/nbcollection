@@ -32,7 +32,7 @@ def run_site_deployment(options: argparse.Namespace) -> None:
             remote_url = os.environ['CIRCLE_REPOSITORY_URL']
             logger.info(f'Using Remote URL: {remote_url}')
             push_remote = project_repo.create_remote(options.publish_remote, remote_url)
-      
+
 
         # TODO: Refactor this file traversing block to use methods available in scanner module
         project_repo.head.reference = branch
@@ -94,8 +94,8 @@ def run_site_deployment(options: argparse.Namespace) -> None:
 
             break
 
-        project_repo.index.commit('Added Site Directory Files')
-        push_remote.push(options.publish_branch, force=True)
+        #project_repo.index.commit('Added Site Directory Files')
+        #push_remote.push(options.publish_branch, force=True)
 
     else:
         raise NotImplementedError(options.site)
