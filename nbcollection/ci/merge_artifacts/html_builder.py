@@ -83,7 +83,7 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
 
 
 def render_index(merge_context: MergeContext, artifact_collections: typing.List[ArtifactCollection]) -> None:
-    print("-----> The context repo name is: ", merge_context.repo_name)
+    logger.info(f"-----> The context repo name is: ", merge_context.repo_name)
     if merge_context.repo_name == "dat_pyinthesky":
         index = load_template('dat_pyinthesky_index.html', merge_context)
     else:
