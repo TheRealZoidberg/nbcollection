@@ -4,5 +4,4 @@ PyYAML
 lxml
 beautifulsoup4
 jupyter-client==7.0.1
-nbconvert
-pandoc
+nbconvert==6.1.0
