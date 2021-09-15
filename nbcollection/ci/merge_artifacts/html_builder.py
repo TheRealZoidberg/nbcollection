@@ -73,7 +73,6 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
             'repo_name': merge_context.repo_name,
             'collection': coll_name,
             'category': cat_name,
-            #'modified': environment['today'],
         },
         'static_url': 'static/',
         'notebook_content': notebook_content,
@@ -83,11 +82,6 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
 
 
 def render_index(merge_context: MergeContext, artifact_collections: typing.List[ArtifactCollection]) -> None:
-    proj = os.getenv('CIRCLE_PROJECT_REPONAME')
-    logger.info(f"-----> The context repo name is: ", merge_context.repo_name)
-    #if proj == 'dat_pyinthesky':
-    #    index = load_template('dat_pyinthesky_index.html', merge_context)
-    #else:
     index = load_template('index.html', merge_context)
     environment = load_environment(merge_context)
     template_context = {
@@ -114,7 +108,7 @@ def extract_cells_from_html(filepath: str) -> None:
 
     cell_data = []
     # NGC4151_FeII_ContinuumFit
-    for cell in soup.findAll('div', {'class': ['jp-Cell-inputWrapper']}):
+    for cell in soup.findAll('div', {'class': ['jp-Cell', 'jp-Cell-inputWrapper']}):
         cell_data.append(str(cell))
 
     if len(cell_data) < 1:
