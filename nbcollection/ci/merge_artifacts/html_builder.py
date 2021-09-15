@@ -85,10 +85,10 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
 def render_index(merge_context: MergeContext, artifact_collections: typing.List[ArtifactCollection]) -> None:
     proj = os.getenv('CIRCLE_PROJECT_REPONAME')
     logger.info(f"-----> The context repo name is: ", merge_context.repo_name)
-    if proj == 'dat_pyinthesky':
-        index = load_template('dat_pyinthesky_index.html', merge_context)
-    else:
-        index = load_template('index.html', merge_context)
+    #if proj == 'dat_pyinthesky':
+    #    index = load_template('dat_pyinthesky_index.html', merge_context)
+    #else:
+    index = load_template('index.html', merge_context)
     environment = load_environment(merge_context)
     template_context = {
         'page': {
