@@ -1,12 +1,12 @@
-title = 'therealzoidberg Notebooks'
+title = 'SpaceTelescope Notebooks'
 description = 'A space for Astronomy Notebooks'
-keywords = ['stsci', 'therealzoidberg', 'jupyter', 'notebooks', 'astronomy']
-author = 'therealzoidberg'
+keywords = ['stsci', 'spacetelescope', 'jupyter', 'notebooks', 'astronomy']
+author = 'spacetelescope'
 maintainer = 'Michael Gough'
 default_locale = 'en'
 website_base_url = 'https://therealzoidberg.github.io/dat_pyinthesky'
-index_title = 'therealzoidberg dat_pyinthesky Index'
+index_title = 'Notebook Index'
 locale = 'en'
 notebook_title = 'JDAT Notebook'
-notebook_keywords = ['stsci', 'therealzoidberg', 'jupyter', 'notebooks', 'astronomy']
+notebook_keywords = ['stsci', 'spacetelescope', 'jupyter', 'notebooks', 'astronomy']
 notebook_description = 'A space for Astronomy Notebooks'
