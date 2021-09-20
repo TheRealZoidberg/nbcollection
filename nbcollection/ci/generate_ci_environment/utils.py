@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 def gen_ci_env(jobs: typing.List[BuildJob], ci_env: CIEnvironment, project_path: str, enable_website_publication: bool,
-        enable_nightly: bool = False) -> None:
+        enable_nightly: bool = False, enable_val: bool = False) -> None:
     if ci_env is not CIEnvironment.CircleCI:
         raise NotImplementedError(f'CIEnvironment "{ci_env}" not supported')
 

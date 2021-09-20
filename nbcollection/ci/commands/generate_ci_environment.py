@@ -37,6 +37,8 @@ def convert(options=None):
                         help="Enable Website Publication")
     parser.add_argument('-g', '--enable-nightly', default=False, action='store_true',
                         help="Enable Nightly Builds")
+    parser.add_argument('-v', '--enable-validation', default=False, action='store_true',
+                        help="Enable cell level notebook validation")
 
     options = parser.parse_args(options[2:])
     run_generate_ci_environment(options)

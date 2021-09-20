@@ -84,7 +84,7 @@ def render_notebook_template(notebook_filepath: str, merge_context: MergeContext
 def render_index(merge_context: MergeContext, artifact_collections: typing.List[ArtifactCollection]) -> None:
     REPO=merge_context.repo_name
 
-    if REPO=='dat_pyinthesky':
+    if REPO!='dat_pyinthesky':
         index = load_template('dat_pyinthesky_index.html', merge_context)
     else:
         index = load_template('index.html', merge_context)
